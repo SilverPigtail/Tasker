@@ -1,6 +1,6 @@
 package user;
 
-import exceptions.InvalidPasswordException;
+import exceptions.InvalidPasswordLengthException;
 
 public class User {
 	private String nickname;
@@ -28,14 +28,14 @@ public class User {
 			return password;
 		}
 		
-		public void setPassword (String pwv) throws InvalidPasswordException{
+		public void setPassword (String pwv) throws InvalidPasswordLengthException{
 			if(pwv.length()>=8) {
 				this.password=pwv;
 				
 				
 			}else{
 				
-				throw new InvalidPasswordException("The password that you had introduced is not suitable, Try using another one.");
+				throw new InvalidPasswordLengthException("The password that you had introduced is not suitable, Try using another one.");
 			}
 		}
 		

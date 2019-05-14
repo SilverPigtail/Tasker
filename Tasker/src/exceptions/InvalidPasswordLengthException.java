@@ -1,8 +1,8 @@
 package exceptions;
 
-public class InvalidPasswordException extends Exception{
+public class InvalidPasswordLengthException extends Exception{
 
-	public InvalidPasswordException(String msg) {
+	public InvalidPasswordLengthException(String msg) {
 		super(msg);
 	}
 	

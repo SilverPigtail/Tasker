@@ -13,12 +13,12 @@ public class Window extends JFrame{
 	
 	public Window() {
 		super();
-		setResizable(false);
+		//setResizable(false);
 		this.setTitle("Registro");
 		startS=new StartScreen(this);
 		this.setSize(500,500);
+		this.setContentPane(new TaskList());
 		this.setVisible(true);
-		this.setContentPane(startS);
 		
 		
 		
@@ -35,11 +35,11 @@ public class Window extends JFrame{
 			
 			this.registerS=new RegisterScreen(this);
 			
-		}else {
+		}
 			this.setTitle("Sing-Up");
 			this.startS.setVisible(false);
 			this.setContentPane(this.registerS);
-		}
+		
 		
 		
 	}
@@ -51,11 +51,11 @@ public class Window extends JFrame{
 			
 			this.loginS=new LoginScreen(this);
 			
-		}else {
+		}
 			this.setTitle("Sign-In");
 			this.startS.setVisible(false);
 			this.setContentPane(this.loginS);
-		}
+		
 		
 		
 	}

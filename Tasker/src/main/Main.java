@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Window progr=new Window();
+		Window progrm=new Window();
 	}
 
 }
