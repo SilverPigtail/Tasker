@@ -21,14 +21,25 @@ import javax.swing.JScrollBar;
 import java.util.Calendar;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
+/***
+ * This is the interface class that store all the completed task for each user.
+ * @author Alejandro Molina Lara
+ *
+ */
 public class CompletedTaskList extends JPanel{
 
-	
+	/***
+	 * This is the constructor of the interface.
+	 * @param w -> The same JFrame window that we use in the program (with all functions).
+	 */
 	public CompletedTaskList(Window w) {
 		
 		
 		super();
+		/***
+		 * Here I create a Date for the completed task. It is suppose to get the current date of
+		 * the system.
+		 */
 		Calendar fecha= Calendar.getInstance();
 		DateTimeFormatter dtf= DateTimeFormatter.ofPattern("\"yyyy/MM/dd HH:mm:ss\"");
 		LocalDateTime now=LocalDateTime.now();
@@ -44,7 +55,10 @@ public class CompletedTaskList extends JPanel{
 
 		completedListado.setBorder(BorderFactory.createLineBorder(Color.red));
 		// listado.setPreferredSize(new Dimension(300, 800));
-
+		
+		/***
+		 * Here I set the layout of the list as a JScrollPane.
+		 */
 		JScrollPane scrollPane = new JScrollPane(completedListado);
 		add(scrollPane);
 		scrollPane.getVerticalScrollBar().setUnitIncrement(10);
