@@ -71,13 +71,13 @@ public class StartScreen extends JPanel {
 		txtrTaskerIsA.setFont(new Font("Verdana", Font.BOLD | Font.ITALIC, 13));
 		txtrTaskerIsA.setBackground(new Color(255, 255, 255));
 		txtrTaskerIsA.setText(
-				"Tasker is a free application where you can add\r\n daily task that you have to do to\r\n remeber them later.");
+				"Tasker is a free application where you can add\r\n daily task that you have to do to\r\n remember them later.");
 		txtrTaskerIsA.setBounds(78, 132, 382, 88);
 		add(txtrTaskerIsA);
 
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\1DAM\\Documents\\Tasker\\Tasker\\resources\\interface_back_1.png"));
-		lblNewLabel.setBounds(0, 0, 500, 500);
+		lblNewLabel.setIcon(new ImageIcon("resources\\interface_back_1.png"));
+		lblNewLabel.setBounds(0, 0, 497, 494);
 		add(lblNewLabel);
 	}
 }

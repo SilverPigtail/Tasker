@@ -4,19 +4,28 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
+
+import databasefunctions.RegisterUser;
+
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class RegisterScreen extends JPanel{
 	private JTextField nickTextField;
 	private JTextField emailField;
 	private JPasswordField passwordRegField;
+
 	
 	public RegisterScreen(Window w) {
+		super();
 		setBackground(new Color(102, 153, 255));
 		setLayout(null);
 		
@@ -55,13 +64,35 @@ public class RegisterScreen extends JPanel{
 		passwordRegField.setBounds(179, 275, 194, 29);
 		add(passwordRegField);
 		
+
 		JButton registerButton = new JButton("SING-UP!");
+		registerButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				RegisterUser register=new RegisterUser(nickTextField.getText(),emailField.getText(), passwordRegField.getText(), w);
+				
+			}
+
+				
+			
+		});
 		registerButton.setBounds(194, 361, 113, 40);
 		add(registerButton);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\1DAM\\Documents\\Tasker\\Tasker\\resources\\register_background.png"));
-		lblNewLabel.setBounds(0, 0, 500, 500);
-		add(lblNewLabel);
+		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				w.loadStartScreen();
+			}
+		});
+		btnBack.setBounds(206, 435, 89, 23);
+		add(btnBack);
+		
+		JLabel backgroundIm = new JLabel("");
+		backgroundIm.setIcon(new ImageIcon("resources\\register_background.png"));
+		backgroundIm.setBounds(0, 0, 500, 500);
+		add(backgroundIm);
+		
+
 	}
 }
