@@ -15,9 +15,13 @@ import java.util.ArrayList;
 import java.awt.BorderLayout;
 import javax.swing.JScrollBar;
 
+//
+import databasefunctions.CountAllTasksFunction;
+//
+
 public class TaskList extends JPanel {
 
-	private ArrayList<String> completedTask= new ArrayList<String>();
+	//private ArrayList<String> completedTask= new ArrayList<String>();
 
 	
 	public TaskList(Window w) {
@@ -25,7 +29,7 @@ public class TaskList extends JPanel {
 		setLayout(new BorderLayout(0, 0));
 
 		w.setSize(540, 600);
-
+		w.setTitle("Total tasks: "+CountAllTasksFunction.countAllTasksFunction(w.getUser().getId()));
 		JPanel listado = new JPanel();
 
 		listado.setBackground(new Color(165, 42, 42));
@@ -50,7 +54,8 @@ public class TaskList extends JPanel {
 			if (resultLength.next()) {
 
 				int i = 0;
-
+				
+				//w.setTitle();
 			
 				do {
 

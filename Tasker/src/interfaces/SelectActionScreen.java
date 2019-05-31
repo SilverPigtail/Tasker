@@ -73,6 +73,7 @@ public class SelectActionScreen extends JPanel{
 		btnShowCompletedTasks.setBounds(287, 193, 203, 48);
 		add(btnShowCompletedTasks);
 		
+		
 		JLabel labelSelectActionBackground = new JLabel("");
 		labelSelectActionBackground.setIcon(new ImageIcon("resources\\selectAction-background.png"));
 		labelSelectActionBackground.setBounds(0, 0, 500, 500);
