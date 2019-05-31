@@ -71,6 +71,9 @@ public class SingleTaskView extends JPanel{
 						    "You will see your completed task in the completed task menu",
 						    "Well done!",
 						    JOptionPane.PLAIN_MESSAGE);*/
+					/*System.out.println(w.getUser().getId());
+					System.out.println( w.getUser().getNickname());*/
+					
 					
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
