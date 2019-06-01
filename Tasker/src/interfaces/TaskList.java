@@ -65,7 +65,7 @@ public class TaskList extends JPanel {
 				
 					System.out.println(resultLength.getString("title"));
 					SingleTaskView btnNewButton = new SingleTaskView(resultLength.getString("title"),
-							resultLength.getString("description"), resultLength.getDate("expected_date").toString(), w);
+							resultLength.getString("description"), resultLength.getDate("expected_date").toString(), w, resultLength.getInt("id"));
 					// btnNewButton.setSize(500,100);
 					btnNewButton.setBounds(8, i, 500, 100);
 					listado.setPreferredSize(new Dimension(300, i + 100));

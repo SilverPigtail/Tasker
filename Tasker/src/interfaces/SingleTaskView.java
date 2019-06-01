@@ -25,7 +25,7 @@ public class SingleTaskView extends JPanel{
 	private String date;
 	private Window w;
 	
-	public SingleTaskView(String title, String description, String date, Window wind) {
+	public SingleTaskView(String title, String description, String date, Window wind, int id) {
 		this.title=title;
 		this.description=description;
 		this.date=date;
@@ -67,7 +67,7 @@ public class SingleTaskView extends JPanel{
 					        "tasker", "tasker");
 					System.out.println(lblTitulo.getText());
 					PreparedStatement updateBoolean= cnb.prepareStatement("update task set finished_date ="+"'"+nowPs+"', completada= "+true+" where user_id= "+w.getUser().getId()+
-							" and title like '"+title+"' and description = '"+description+"';");
+							" and title like '"+title+"' and description = '"+description+"' and id="+id);
 					updateBoolean.execute();
 					cnb.close();
 					
