@@ -73,16 +73,6 @@ public class NewTaskScreen extends JPanel{
 		add(textFieldOfDate);
 		textFieldOfDate.setColumns(10);
 		
-		/*JDateChooser dateChooser = new JDateChooser();
-		DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD");  
-		Date dateToConv=(Date) dateChooser.getDate();
-        String strDate = dateFormat.format(dateToConv); 
-
-		dateChooser.setBounds(208, 299, 119, 20);
-		add(dateChooser);
-		
-		
-		System.out.println(dateChooser.getDate());*/
 		
 		JButton addTaskButton = new JButton("Add Task");
 		addTaskButton.addActionListener(new ActionListener() {
