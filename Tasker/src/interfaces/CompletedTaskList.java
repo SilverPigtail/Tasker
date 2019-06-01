@@ -40,9 +40,7 @@ public class CompletedTaskList extends JPanel{
 		 * Here I create a Date for the completed task. It is suppose to get the current date of
 		 * the system.
 		 */
-		Calendar fecha= Calendar.getInstance();
-		DateTimeFormatter dtf= DateTimeFormatter.ofPattern("\"yyyy/MM/dd HH:mm:ss\"");
-		LocalDateTime now=LocalDateTime.now();
+		
 		
 		
 		setLayout(new BorderLayout(0, 0));
@@ -83,7 +81,7 @@ public class CompletedTaskList extends JPanel{
 				do {
 					
 					
-					SingleCompletedTaskView btnNewButton = new SingleCompletedTaskView(resultLength2.getString("title"), now.toString());
+					SingleCompletedTaskView btnNewButton = new SingleCompletedTaskView(resultLength2.getString("title"), resultLength2.getString("finished_date"));
 					btnNewButton.setSize(500,100);
 					btnNewButton.setBounds(8, i, 500, 100);
 					completedListado.setPreferredSize(new Dimension(300, i + 100));

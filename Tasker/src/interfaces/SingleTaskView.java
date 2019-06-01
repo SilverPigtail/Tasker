@@ -13,9 +13,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.Color;
+
 
 public class SingleTaskView extends JPanel{
 	private String title;
@@ -55,24 +57,22 @@ public class SingleTaskView extends JPanel{
 		btnCompletar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				//databasefunctions.CompleteTaskFunction();
+				LocalDate now = LocalDate.now();
+				String nowPs=now.toString();
+				System.out.println(nowPs);
+				
 				
 				try {
 					Connection cnb=DriverManager.getConnection("jdbc:mysql://51.158.162.242:3306/tasker",
 					        "tasker", "tasker");
 					System.out.println(lblTitulo.getText());
-					PreparedStatement updateBoolean= cnb.prepareStatement("update task set completada = true where title= '"+lblTitulo.getText()+"';");
+					PreparedStatement updateBoolean= cnb.prepareStatement("update task set finished_date ="+"'"+nowPs+"', completada= "+true+" where user_id= "+w.getUser().getId()+
+							" and title like '"+title+"'");
 					updateBoolean.execute();
 					cnb.close();
 					
+					//AddDateToCompletedTask.addDateToCompletedTask(lblTitulo.getText(), w);
 					wind.loadCompletedTaskListFromTasks();
-					
-					/*JOptionPane.showMessageDialog(null,
-						    "You will see your completed task in the completed task menu",
-						    "Well done!",
-						    JOptionPane.PLAIN_MESSAGE);*/
-					/*System.out.println(w.getUser().getId());
-					System.out.println( w.getUser().getNickname());*/
 					
 					
 				} catch (SQLException e) {
