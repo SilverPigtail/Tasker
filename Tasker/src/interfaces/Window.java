@@ -4,6 +4,8 @@ import javax.swing.JFrame;
 
 import databasefunctions.LoginUser;
 import user_task.User;
+
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -120,7 +122,7 @@ public class Window extends JFrame{
 	}
 
 	
-	public void backSelecActionScreenAdd() {
+	public void backSelectActionScreenAdd() {
 		
 		this.setTitle("Hello, what do you want to do?");
 
@@ -145,6 +147,37 @@ public class Window extends JFrame{
 		this.ctl=new CompletedTaskList(this);
 		this.tl.setVisible(false);
 		this.setContentPane(ctl);
+	}
+	
+	
+	public void backToSelectScreenFromTaskList() {
+		
+		this.setTitle("Hello, what do you want to do?");
+		
+		
+		
+		this.tl.setVisible(false);
+		this.sas.setVisible(true);
+		this.sas.setSize(500, 500);
+		this.setSize(500, 500);
+		this.setContentPane(sas);
+		
+		
+	}
+	
+	public void backToSelectScreenFromCompletedTasksList() {
+		
+		this.setTitle("Hello, what do you want to do?");
+		
+		
+		
+		this.ctl.setVisible(false);
+		this.sas.setVisible(true);
+		this.sas.setSize(500, 500);
+		this.setSize(500, 500);
+		this.setContentPane(sas);
+		
+		
 	}
 	
 	

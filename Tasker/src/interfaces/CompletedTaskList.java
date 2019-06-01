@@ -81,7 +81,7 @@ public class CompletedTaskList extends JPanel{
 				do {
 					
 					
-					SingleCompletedTaskView btnNewButton = new SingleCompletedTaskView(resultLength2.getString("title"), resultLength2.getString("finished_date"));
+					SingleCompletedTaskView btnNewButton = new SingleCompletedTaskView(resultLength2.getString("title"), resultLength2.getString("finished_date"), w);
 					btnNewButton.setSize(500,100);
 					btnNewButton.setBounds(8, i, 500, 100);
 					completedListado.setPreferredSize(new Dimension(300, i + 100));

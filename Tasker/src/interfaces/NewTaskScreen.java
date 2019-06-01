@@ -3,6 +3,7 @@ package interfaces;
 import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JRadioButton;
@@ -78,10 +79,8 @@ public class NewTaskScreen extends JPanel{
 		addTaskButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				
-				
-				
 				addTaskFunction.addTaskFunction(taskNameField.getText(), taskDescriptionField.getText(), textFieldOfDate.getText(), w.getUser().getId());
+
 			}
 		});
 		addTaskButton.setBounds(208, 368, 119, 34);
@@ -90,7 +89,7 @@ public class NewTaskScreen extends JPanel{
 		JButton btnBack = new JButton("back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				w.backSelecActionScreenAdd();
+				w.backSelectActionScreenAdd();
 			}
 		});
 		btnBack.setBounds(360, 437, 89, 23);

@@ -82,8 +82,18 @@ public class SingleTaskView extends JPanel{
 				
 			}
 		});
-		btnCompletar.setBounds(388, 11, 89, 74);
+		btnCompletar.setBounds(388, 0, 89, 60);
 		add(btnCompletar);
+		
+		JButton btnBack = new JButton("back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				w.backToSelectScreenFromTaskList();
+			}
+		});
+		btnBack.setBounds(388, 56, 89, 44);
+		add(btnBack);
 		
 		JLabel lblBackground = new JLabel("");
 		lblBackground.setIcon(new ImageIcon("resources\\singletaskview Background.png"));

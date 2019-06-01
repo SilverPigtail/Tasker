@@ -70,6 +70,8 @@ public class RegisterScreen extends JPanel {
 		registerButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+				
+			
 
 				if (passwordRegField.getText().length() > 8) {
 
@@ -91,9 +93,12 @@ public class RegisterScreen extends JPanel {
 
 				}
 
-			}
-
-		});
+			
+				
+			
+			
+			
+		}});
 		registerButton.setBounds(194, 361, 113, 40);
 		add(registerButton);
 
