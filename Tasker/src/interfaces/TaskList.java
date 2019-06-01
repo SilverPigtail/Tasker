@@ -17,6 +17,9 @@ import javax.swing.JScrollBar;
 
 //
 import databasefunctions.CountAllTasksFunction;
+import javax.swing.JButton;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 //
 
 public class TaskList extends JPanel {

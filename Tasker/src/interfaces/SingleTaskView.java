@@ -67,7 +67,7 @@ public class SingleTaskView extends JPanel{
 					        "tasker", "tasker");
 					System.out.println(lblTitulo.getText());
 					PreparedStatement updateBoolean= cnb.prepareStatement("update task set finished_date ="+"'"+nowPs+"', completada= "+true+" where user_id= "+w.getUser().getId()+
-							" and title like '"+title+"'");
+							" and title like '"+title+"' and description = '"+description+"';");
 					updateBoolean.execute();
 					cnb.close();
 					
