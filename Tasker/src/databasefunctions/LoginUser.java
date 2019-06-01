@@ -31,6 +31,7 @@ public class LoginUser {
 	 *            LoginScreen class.
 	 * @param w   -> the window that is received from the interface in general to
 	 *            make this works.
+	 * @throws LoginFailedException 
 	 */
 	public static  User LoginUserFunction(String nm, String pwd) {
 		//super();
@@ -92,6 +93,7 @@ public class LoginUser {
 				/***
 				 * If the comparison fails, this error message will appear ass a aware window.
 				 */
+				
 				JOptionPane.showMessageDialog(null, "Login failed", "Login error", JOptionPane.ERROR_MESSAGE);
 			}
 

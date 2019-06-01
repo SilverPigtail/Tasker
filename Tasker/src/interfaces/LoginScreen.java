@@ -55,7 +55,6 @@ public class LoginScreen extends JPanel{
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				
-				
 				User userToLog= LoginUser.LoginUserFunction(nickNameLoginField.getText(), passwordLoginField.getText());
 				if(userToLog!=null) {
 					w.setUser(userToLog);
