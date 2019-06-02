@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 /**
- * This is the class of the single view of a completed task
+ * This is the class of the interface of the single view of a completed task
  * @author Alejandro Molina Lara (SilverPigtail)
  *
  */
