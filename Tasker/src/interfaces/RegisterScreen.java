@@ -21,11 +21,20 @@ import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/***
+ * This class is the one that model the sing-up Screen, it contains all the visual parts of the interface.
+ * @author Alejandro Molina Lara (SilverPigtail)
+ *
+ */
 public class RegisterScreen extends JPanel {
 	private JTextField nickTextField;
 	private JTextField emailField;
 	private JPasswordField passwordRegField;
 
+	/***
+	 * This is the function that models the interface.
+	 * @param w -> The window that contains all the window functions and some important parametres.
+	 */
 	public RegisterScreen(Window w) {
 		super();
 		setBackground(new Color(102, 153, 255));
@@ -70,7 +79,12 @@ public class RegisterScreen extends JPanel {
 		registerButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				
+				/***
+				 * This function allows thw program to get the fields and then, checks if the length of the password
+				 * is smaller than 8 character. If this is true, then the inputs are sent to the function that insert
+				 * this data in the database. If the length of the pasword is longer than eigth characters, then an
+				 * exception pops-up.
+				 */
 			
 
 				if (passwordRegField.getText().length() > 8) {

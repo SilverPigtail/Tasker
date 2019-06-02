@@ -7,10 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-
+/***
+ * This is the functions that allows the program to show the number of the uncompleted task that you have in the Window Title.
+ * @author Alejandro Molina Lara (SilverPigtail)
+ *
+ */
 public class CountAllTasksFunction {
 
-	//private ArrayList<int>TotalUserTasks=new ArrayList<int>();
 	
 	
 	public static int countAllTasksFunction(int id) {

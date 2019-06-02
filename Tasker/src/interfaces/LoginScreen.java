@@ -17,7 +17,7 @@ import java.awt.event.MouseEvent;
 
 /***
  * This class is the interface that appears when you click the login button in the start screen.
- * @author Alejandro Molina Lara
+ * @author Alejandro Molina Lara (SilverPigtail)
  *
  */
 public class LoginScreen extends JPanel{
@@ -26,12 +26,18 @@ public class LoginScreen extends JPanel{
 	
 	
 	
-	
+	/***
+	 * Here's the function that establish all the Login Screen interface.
+	 * @param w -> The Window parametre that allows us to get all the fcuntions and data from the Window class.
+	 */
 	public LoginScreen(Window w) {
 		super();
 		setBackground(Color.CYAN);
 		setLayout(null);
 		
+		/***
+		 * Here I set the buttons and all the visual interface of the Login Screen.
+		 */
 		JLabel lblNickname = new JLabel("Nickname:");
 		lblNickname.setFont(new Font("Verdana", Font.BOLD, 16));
 		lblNickname.setBounds(83, 164, 100, 23);
@@ -56,6 +62,11 @@ public class LoginScreen extends JPanel{
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				
+				/***
+				 * The objective of this part of the code is create the user as an object and pass the data to the
+				 * verification function to compare the information with the database. If it is correct, then the
+				 * program allows you to access to the Select action screen.
+				 */
 				User userToLog= LoginUser.LoginUserFunction(nickNameLoginField.getText(), passwordLoginField.getText());
 				if(userToLog!=null) {
 					w.setUser(userToLog);

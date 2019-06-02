@@ -23,7 +23,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 /***
  * This is the interface class that store all the completed task for each user.
- * @author Alejandro Molina Lara
+ * @author Alejandro Molina Lara (SilverPigtail)
  *
  */
 public class CompletedTaskList extends JPanel{
@@ -65,7 +65,10 @@ public class CompletedTaskList extends JPanel{
 		
 		
 		
-		
+		/***
+		 * This try-catch allows the program to send the select the completed task information from the database and then
+		 * create SingleCompletedTaskView buttons based on the completed task that the user have.
+		 */
 		try {
 			Connection cnc = DriverManager.getConnection("jdbc:mysql://51.158.162.242:3306/tasker", "tasker", "tasker");
 

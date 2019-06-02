@@ -23,6 +23,11 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 
+/***
+ * This class create the add task screen interface that allows you to creade tasks.
+ * @author Alejandro Molina Lara (SilverPigtail)
+ *
+ */
 public class NewTaskScreen extends JPanel{
 	private JTextField taskNameField;
 	private JTextField textDateField;
@@ -30,12 +35,17 @@ public class NewTaskScreen extends JPanel{
 
 
 	
-	
+	/***
+	 * This is the function that contains all the visual interface information about the add task screen.
+	 * @param w -> The window of the Window class that contains all the screen functions and data from it.
+	 */
 	public NewTaskScreen(Window w) {
 		
 
 		
-		
+		/***
+		 * Here are all the interface settings and visual parametres of the interface class.
+		 */
 		setBackground(Color.ORANGE);
 		setLayout(null);
 		
@@ -78,7 +88,10 @@ public class NewTaskScreen extends JPanel{
 		JButton addTaskButton = new JButton("Add Task");
 		addTaskButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				/***
+				 * This function allows the program to get all the information written in the fields of the interface and
+				 * send it to the function that send the task's data to the database.
+				 */
 				addTaskFunction.addTaskFunction(taskNameField.getText(), taskDescriptionField.getText(), textFieldOfDate.getText(), w.getUser().getId());
 
 			}

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /***
  * This class adds the task that you have entered in the "addTaskScreen" class and send it to the database.
- * @author Alejandro Molina Lara
+ * @author Alejandro Molina Lara (SilverPigtail)
  *
  */
 public class addTaskFunction {

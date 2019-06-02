@@ -17,8 +17,9 @@ import user_task.User;
 
 /***
  * 
- * @author Alejandro Molina Lara With this class we can do a normal login
- *         comparing the data of the database.
+ * @author Alejandro Molina Lara (SilverPigtail)
+ *  With this class we can do a normal login
+ *  comparing the data of the database.
  */
 public class LoginUser {
 

@@ -18,13 +18,25 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 
-
+/***
+ * This is the class of the interface of the single view of a task
+ * @author Alejandro Molina Lara
+ *
+ */
 public class SingleTaskView extends JPanel{
 	private String title;
 	private String description;
 	private String date;
 	private Window w;
 	
+	/***
+	 * This is the function that models the interface of the single task view.
+	 * @param title -> The title of the task that is received from the database
+	 * @param description -> The description of the task that is received from the database
+	 * @param date -> The date of the task that is received from the database.
+	 * @param wind -> The window that contains all the window functions an all the important parameters
+	 * @param id -> The id of the user that have the selected task that is received from the "getId" function
+	 */
 	public SingleTaskView(String title, String description, String date, Window wind, int id) {
 		this.title=title;
 		this.description=description;
