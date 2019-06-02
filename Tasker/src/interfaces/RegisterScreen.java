@@ -82,7 +82,7 @@ public class RegisterScreen extends JPanel {
 				/***
 				 * This function allows thw program to get the fields and then, checks if the length of the password
 				 * is smaller than 8 character. If this is true, then the inputs are sent to the function that insert
-				 * this data in the database. If the length of the pasword is longer than eigth characters, then an
+				 * this data in the database. If the length of the password is longer than eight characters, then an
 				 * exception pops-up.
 				 */
 			
