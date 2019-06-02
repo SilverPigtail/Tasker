@@ -87,13 +87,11 @@ public class SingleTaskView extends JPanel{
 				
 				LocalDate now = LocalDate.now();
 				String nowPs=now.toString();
-				System.out.println(nowPs);
 				
 				
 				try {
 					Connection cnb=DriverManager.getConnection("jdbc:mysql://51.158.162.242:3306/tasker",
 					        "tasker", "tasker");
-					System.out.println(lblTitulo.getText());
 					PreparedStatement updateBoolean= cnb.prepareStatement("update task set finished_date ="+"'"+nowPs+"', completada= "+true+" where user_id= "+w.getUser().getId()+
 							" and title like '"+title+"' and description = '"+description+"' and id="+id);
 					updateBoolean.execute();

@@ -49,22 +49,33 @@ public class NewTaskScreen extends JPanel{
 		setLayout(null);
 		
 		
-		
+		/***
+		 * The label of the task name text
+		 */
 		JLabel lblTaskName = new JLabel("Task name:");
 		lblTaskName.setFont(new Font("Verdana", Font.BOLD, 16));
 		lblTaskName.setBounds(29, 85, 147, 19);
 		add(lblTaskName);
 		
+		/***
+		 * The label of description text
+		 */
 		JLabel lblTaskDescription = new JLabel("Task description:");
 		lblTaskDescription.setFont(new Font("Verdana", Font.BOLD, 16));
 		lblTaskDescription.setBounds(29, 198, 169, 34);
 		add(lblTaskDescription);
 		
+		/***
+		 * The label of expected_date text
+		 */
 		JLabel lblExpectedDate = new JLabel("Expected date:");
 		lblExpectedDate.setFont(new Font("Verdana", Font.BOLD, 16));
 		lblExpectedDate.setBounds(33, 299, 143, 20);
 		add(lblExpectedDate);
 		
+		/***
+		 * The field of where you write the name of you'r new task
+		 */
 		taskNameField = new JTextField();
 		taskNameField.setBounds(208, 87, 119, 20);
 		add(taskNameField);
@@ -72,19 +83,26 @@ public class NewTaskScreen extends JPanel{
 		
 		
 		
-		
+		/***
+		 * The field of the description input of your new task
+		 */
 		JTextArea taskDescriptionField = new JTextArea();
 		taskDescriptionField.setLineWrap(true);
 		taskDescriptionField.setBounds(191, 175, 158, 88);
 		
 		add(taskDescriptionField);
 		
+		/***
+		 * The field where you write the date of your new task
+		 */
 		textFieldOfDate = new JTextField();
 		textFieldOfDate.setBounds(208, 302, 119, 20);
 		add(textFieldOfDate);
 		textFieldOfDate.setColumns(10);
 		
-		
+		/***
+		 * The button that allows to the program to cast the function that create a task in the database
+		 */
 		JButton addTaskButton = new JButton("Add Task");
 		addTaskButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -99,6 +117,9 @@ public class NewTaskScreen extends JPanel{
 		addTaskButton.setBounds(208, 368, 119, 34);
 		add(addTaskButton);
 		
+		/***
+		 * The button back that allows the program to back to the select Action Screen
+		 */
 		JButton btnBack = new JButton("back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -108,21 +129,33 @@ public class NewTaskScreen extends JPanel{
 		btnBack.setBounds(360, 437, 89, 23);
 		add(btnBack);
 		
+		/***
+		 * The label that awares the user of the format of the date that he has to use
+		 */
 		JLabel lblDateFormat = new JLabel("FORMAT (YYYY-MM-dd)");
 		lblDateFormat.setFont(new Font("Verdana", Font.BOLD, 11));
 		lblDateFormat.setBounds(191, 274, 158, 14);
 		add(lblDateFormat);
 		
+		/***
+		 * The label that awares the user of the max length of the description
+		 */
 		JLabel lblCharacters = new JLabel("45 Characters");
 		lblCharacters.setFont(new Font("Verdana", Font.BOLD, 11));
 		lblCharacters.setBounds(208, 130, 119, 34);
 		add(lblCharacters);
 		
+		/**
+		 * The label that awares the user of the max length of the task name
+		 */
 		JLabel lblCharacters_1 = new JLabel("15 characters");
 		lblCharacters_1.setFont(new Font("Verdana", Font.BOLD, 11));
 		lblCharacters_1.setBounds(208, 41, 119, 14);
 		add(lblCharacters_1);
 		
+		/***
+		 * The label that contains the image used as a background
+		 */
 		JLabel fieldOfDate = new JLabel("");
 		fieldOfDate.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		fieldOfDate.setIcon(new ImageIcon("resources\\new_task_background.png"));

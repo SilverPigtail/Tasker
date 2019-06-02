@@ -89,10 +89,13 @@ public class LoginScreen extends JPanel{
 			}
 		});
 		
+		
 		btnSignIn.setFont(new Font("Verdana", Font.BOLD, 12));
 		btnSignIn.setBounds(192, 360, 100, 30);
 		add(btnSignIn);
-		
+		/***
+		 * The sign-in button that allows the program to back to the start screen and sing-out
+		 */
 		JButton btnBack = new JButton("Back");
 		btnBack.addMouseListener(new MouseAdapter() {
 			@Override
@@ -104,12 +107,17 @@ public class LoginScreen extends JPanel{
 		});
 		btnBack.setBounds(321, 365, 69, 23);
 		add(btnBack);
-		
+		/***
+		 * This is the label that is used as a title of the screen
+		 */
 		JLabel lblWelcomeToTasker = new JLabel("Welcome to Tasker again!");
 		lblWelcomeToTasker.setFont(new Font("Verdana", Font.BOLD, 16));
 		lblWelcomeToTasker.setBounds(115, 81, 262, 54);
 		add(lblWelcomeToTasker);
 		
+		/***
+		 * This label contains the image used as a background
+		 */
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("resources\\login_background.png"));
 		lblNewLabel.setBounds(0, 0, 500, 500);

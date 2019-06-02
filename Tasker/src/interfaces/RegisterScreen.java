@@ -40,47 +40,72 @@ public class RegisterScreen extends JPanel {
 		setBackground(new Color(102, 153, 255));
 		setLayout(null);
 
+		/***
+		 * The label of the sign-up text
+		 */
 		JLabel lblTaskerSignup = new JLabel("Tasker Sign-up");
 		lblTaskerSignup.setFont(new Font("Verdana", Font.BOLD, 16));
 		lblTaskerSignup.setBackground(new Color(0, 0, 0));
 		lblTaskerSignup.setBounds(193, 11, 159, 34);
 		add(lblTaskerSignup);
 
+		/***
+		 * The label of the nickname text
+		 */
 		JLabel nicknameLabel = new JLabel("Nickname:");
 		nicknameLabel.setFont(new Font("Arial", Font.BOLD, 17));
 		nicknameLabel.setBounds(41, 126, 94, 29);
 		add(nicknameLabel);
 
+		/***
+		 * The label of the email text
+		 */
 		JLabel emailLabel = new JLabel("E-mail:");
 		emailLabel.setFont(new Font("Arial", Font.BOLD, 17));
 		emailLabel.setBounds(41, 207, 94, 29);
 		add(emailLabel);
+		
 
+		/***
+		 * The label of the password text
+		 */
 		JLabel passwordLabel = new JLabel("Password:");
 		passwordLabel.setFont(new Font("Arial", Font.BOLD, 17));
 		passwordLabel.setBounds(41, 277, 106, 40);
 		add(passwordLabel);
 
+		/***
+		 * The field where the user writes the username
+		 */
 		nickTextField = new JTextField();
 		nickTextField.setBounds(179, 130, 189, 40);
 		add(nickTextField);
 		nickTextField.setColumns(10);
 
+		/***
+		 * The field where the user writes the email
+		 */
 		emailField = new JTextField();
 		emailField.setBounds(179, 209, 189, 29);
 		add(emailField);
 		emailField.setColumns(10);
 
+		/***
+		 * The password field where the user writes the password
+		 */
 		passwordRegField = new JPasswordField();
 		passwordRegField.setBounds(179, 275, 194, 29);
 		add(passwordRegField);
 
+		/***
+		 * The button that allows the program to cast the log-in function
+		 */
 		JButton registerButton = new JButton("SING-UP!");
 		registerButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				/***
-				 * This function allows thw program to get the fields and then, checks if the length of the password
+				 * This function allows the program to get the fields and then, checks if the length of the password
 				 * is smaller than 8 character. If this is true, then the inputs are sent to the function that insert
 				 * this data in the database. If the length of the password is longer than eight characters, then an
 				 * exception pops-up.
@@ -116,6 +141,9 @@ public class RegisterScreen extends JPanel {
 		registerButton.setBounds(194, 361, 113, 40);
 		add(registerButton);
 
+		/***
+		 * The button that allows the program to back to he start screen
+		 */
 		JButton btnBack = new JButton("Back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -125,6 +153,9 @@ public class RegisterScreen extends JPanel {
 		btnBack.setBounds(206, 435, 89, 23);
 		add(btnBack);
 
+		/***
+		 * The label that contains the image used as a background
+		 */
 		JLabel backgroundIm = new JLabel("");
 		backgroundIm.setIcon(new ImageIcon("resources\\register_background.png"));
 		backgroundIm.setBounds(0, 0, 500, 500);

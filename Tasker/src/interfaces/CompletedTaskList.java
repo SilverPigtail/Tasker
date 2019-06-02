@@ -52,7 +52,7 @@ public class CompletedTaskList extends JPanel{
 		completedListado.setBackground(new Color(165, 42, 42));
 
 		completedListado.setBorder(BorderFactory.createLineBorder(Color.red));
-		// listado.setPreferredSize(new Dimension(300, 800));
+		
 		
 		/***
 		 * Here I set the layout of the list as a JScrollPane.
@@ -96,7 +96,7 @@ public class CompletedTaskList extends JPanel{
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 

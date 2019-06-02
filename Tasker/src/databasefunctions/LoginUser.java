@@ -35,7 +35,6 @@ public class LoginUser {
 	 * @throws LoginFailedException 
 	 */
 	public static  User LoginUserFunction(String nm, String pwd) {
-		//super();
 
 		String nicknameToLog = nm;
 		String passwordToLog = pwd;
@@ -86,7 +85,6 @@ public class LoginUser {
 					User userLogged=new User(nicknameToLog, userToCheck.getString("email"), passwordToLog, idToPass);
 					
 					return userLogged;
-					//w.loadSelectActionScreen();
 					
 				}
 

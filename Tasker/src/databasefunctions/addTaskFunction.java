@@ -35,7 +35,7 @@ public class addTaskFunction {
 
 		/***
 		 * This try-catch set the connection with the database (located in the Juanmi's server) and
-		 * create a statement that register de data from the function on the database.
+		 * create a statement that register the data from the function on the database.
 		 */
 		try {
 			cnl = DriverManager.getConnection("jdbc:mysql://51.158.162.242:3306/tasker", "tasker", "tasker");

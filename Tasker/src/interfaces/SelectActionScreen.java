@@ -40,6 +40,9 @@ public class SelectActionScreen extends JPanel{
 		btnAddTask.setBounds(10, 268, 188, 48);
 		add(btnAddTask);
 		
+		/***
+		 * The button that cast the task list screen
+		 */
 		JButton btnShowTasks = new JButton("Show tasks");
 		btnShowTasks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -49,11 +52,17 @@ public class SelectActionScreen extends JPanel{
 		btnShowTasks.setBounds(287, 268, 203, 48);
 		add(btnShowTasks);
 		
+		/***
+		 * The label that contains this text
+		 */
 		JLabel lblWhatDoYou = new JLabel("Hello, What do you want to do?");
 		lblWhatDoYou.setFont(new Font("Verdana", Font.BOLD, 16));
 		lblWhatDoYou.setBounds(98, 53, 282, 35);
 		add(lblWhatDoYou);
 		
+		/***
+		 * The button that allows the program to stop the execution
+		 */
 		JButton btnExit = new JButton("exit");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -63,6 +72,9 @@ public class SelectActionScreen extends JPanel{
 		btnExit.setBounds(201, 436, 89, 23);
 		add(btnExit);
 		
+		/***
+		 * The button that allows the program to load the task screen
+		 */
 		JButton backToLoginButton = new JButton("Back");
 		backToLoginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -72,6 +84,9 @@ public class SelectActionScreen extends JPanel{
 		backToLoginButton.setBounds(201, 411, 89, 23);
 		add(backToLoginButton);
 		
+		/***
+		 * The button that cast the completed task list screen
+		 */
 		JButton btnShowCompletedTasks = new JButton("Show completed tasks");
 		btnShowCompletedTasks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -81,7 +96,9 @@ public class SelectActionScreen extends JPanel{
 		btnShowCompletedTasks.setBounds(287, 193, 203, 48);
 		add(btnShowCompletedTasks);
 		
-		
+		/***
+		 * The label that contains the image used as a background
+		 */
 		JLabel labelSelectActionBackground = new JLabel("");
 		labelSelectActionBackground.setIcon(new ImageIcon("resources\\selectAction-background.png"));
 		labelSelectActionBackground.setBounds(0, 0, 500, 500);

@@ -15,7 +15,11 @@ import java.util.ArrayList;
 public class CountAllTasksFunction {
 
 	
-	
+	/***
+	 * The constructor of the class
+	 * @param id -> The id from the user of the task
+	 * @return -> The ammount of the task that the user have
+	 */
 	public static int countAllTasksFunction(int id) {
 		
 		Connection cnc=null;
@@ -43,7 +47,7 @@ public class CountAllTasksFunction {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return 0;
