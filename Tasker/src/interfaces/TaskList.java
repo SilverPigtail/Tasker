@@ -21,16 +21,23 @@ import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 //
-
+/***
+ * The class that models the task list of the program
+ * @author Alejandro Molina Lara (SilverPigtail)
+ *
+ */
 public class TaskList extends JPanel {
 
-	//private ArrayList<String> completedTask= new ArrayList<String>();
 
-	
+	/***
+	 * The constructor of the task list
+	 * @param w -> the window that contains all the Window's functions and parameters.
+	 */
 	public TaskList(Window w) {
 		super();
 		setLayout(new BorderLayout(0, 0));
 
+		
 		w.setSize(540, 600);
 		w.setTitle("Total tasks: "+CountAllTasksFunction.countAllTasksFunction(w.getUser().getId()));
 		JPanel listado = new JPanel();
@@ -39,7 +46,10 @@ public class TaskList extends JPanel {
 
 		listado.setBorder(BorderFactory.createLineBorder(Color.red));
 		// listado.setPreferredSize(new Dimension(300, 800));
-
+		
+		/***
+		 * Here I set the JScrollPane
+		 */
 		JScrollPane scrollPane = new JScrollPane(listado);
 		add(scrollPane);
 		scrollPane.getVerticalScrollBar().setUnitIncrement(10);
@@ -48,6 +58,10 @@ public class TaskList extends JPanel {
 
 		Connection cnt = null;
 
+		/***
+		 * This part of the code allows the program to create single task view screens as many as you have uncompleted and
+		 * put it in the listed tasks.
+		 */
 		try {
 			Connection cn = DriverManager.getConnection("jdbc:mysql://51.158.162.242:3306/tasker", "tasker", "tasker");
 

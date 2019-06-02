@@ -11,6 +11,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.text.SimpleDateFormat;
 
+/***
+ * This is the main JFrame class that contains all the Screen functions and the window
+ * @author Alejandro Molina Lara (SilverPigtail)
+ *
+ */
 public class Window extends JFrame{
 	private RegisterScreen registerS;
 	private LoginScreen loginS;
@@ -21,7 +26,9 @@ public class Window extends JFrame{
 	private CompletedTaskList ctl;
 	private User user;
 	
-	
+	/***
+	 * The constructor of the window class
+	 */
 	public Window() {
 		super();
 		setIconImage(Toolkit.getDefaultToolkit().getImage("resources\\pixil-frame-0 (7).png"));
@@ -43,7 +50,9 @@ public class Window extends JFrame{
 		
 	}
 	
-	
+	/***
+	 * This function loads the sing-up screen
+	 */
 	public void loadRegisterScreen() {
 		
 		
@@ -56,7 +65,9 @@ public class Window extends JFrame{
 		
 	}
 	
-	
+	/***
+	 * This function loads the log-in screen
+	 */
 	public void loadLoginScreen() {
 		
 		
@@ -70,6 +81,9 @@ public class Window extends JFrame{
 		
 	}
 	
+	/***
+	 * Thi function loads the Start Screen
+	 */
 	public void loadStartScreen() {
 		
 		this.setTitle("Tasker, all what do you have to do here!");
@@ -88,7 +102,9 @@ public class Window extends JFrame{
 		this.setContentPane(startS);
 	}
 	
-	
+	/***
+	 * This function load the select action screen
+	 */
 	public void loadSelectActionScreen() {
 		
 		
@@ -101,7 +117,9 @@ public class Window extends JFrame{
 		
 	}
 	
-	
+	/***
+	 * This class the new task screen
+	 */
 	public void loadNewTaskScreen() {
 
 		this.setTitle("Add a task!");
@@ -111,17 +129,20 @@ public class Window extends JFrame{
 		this.setContentPane(nts);
 	}
 	
-	
+	/***
+	 * This class load the task Screen
+	 */
 	public void loadTaskScreen() {
 		
-		this.setTitle("Take your time");
 		this.tl=new TaskList(this);
 		this.sas.setVisible(false);
 		this.setContentPane(tl);
 		
 	}
 
-	
+	/***
+	 * This function loads the select action screen again
+	 */
 	public void backSelectActionScreenAdd() {
 		
 		this.setTitle("Hello, what do you want to do?");
@@ -132,6 +153,9 @@ public class Window extends JFrame{
 		
 	}
 
+	/***
+	 * This function loads the completed tasks list
+	 */
 	public void loadCompletedTaskList() {
 		
 		this.setTitle("See what you have done!");
@@ -140,7 +164,9 @@ public class Window extends JFrame{
 		this.setContentPane(ctl);
 	}
 	
-	
+	/***
+	 * This function loads the comleted task lists from the uncompleted task list
+	 */
 	public void loadCompletedTaskListFromTasks() {
 		
 		this.setTitle("See what you have done!");
@@ -150,6 +176,9 @@ public class Window extends JFrame{
 	}
 	
 	
+	/***
+	 * This function load the select Action Screen from the task list Screen
+	 */
 	public void backToSelectScreenFromTaskList() {
 		
 		this.setTitle("Hello, what do you want to do?");
@@ -165,6 +194,10 @@ public class Window extends JFrame{
 		
 	}
 	
+	
+	/***
+	 * This function loads the select Action Screen from the completed task screen
+	 */
 	public void backToSelectScreenFromCompletedTasksList() {
 		
 		this.setTitle("Hello, what do you want to do?");
@@ -180,12 +213,18 @@ public class Window extends JFrame{
 		
 	}
 	
-	
+	/***
+	 * This allows to the rest of the classes to get the user of the user from the database
+	 * @return user
+	 */
 	public User getUser() {
 		return user;
 	}
 
-
+	/***
+	 * This allows the rest of the classes to set user from the database
+	 * @param user
+	 */
 	public void setUser(User user) {
 		this.user = user;
 	}

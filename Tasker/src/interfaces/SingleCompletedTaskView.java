@@ -27,14 +27,23 @@ public class SingleCompletedTaskView extends JPanel {
 	public SingleCompletedTaskView(String title, String today, Window w) {
 		setLayout(null);
 		
+		/***
+		 * Label of the title of the completed task
+		 */
 		JLabel lblTitle = new JLabel(title);
 		lblTitle.setBounds(10, 42, 142, 14);
 		add(lblTitle);
 		
+		/***
+		 * label of the date that the task was completed
+		 */
 		JLabel lblDate = new JLabel(today);
 		lblDate.setBounds(214, 42, 212, 14);
 		add(lblDate);
 		
+		/***
+		 * Button that allows the program to back to the Select Action Screen interface
+		 */
 		JButton btnBack = new JButton("back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -49,6 +58,9 @@ public class SingleCompletedTaskView extends JPanel {
 		btnBack.setBounds(351, 11, 89, 50);
 		add(btnBack);
 		
+		/***
+		 * The label that contains the image used as a bakcground
+		 */
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("resources\\completed_task_back.png"));
 		label.setBounds(0, 0, 639, 300);

@@ -10,7 +10,6 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 
 import databasefunctions.addTaskFunction;
-import user_task.Task;
 
 import java.awt.event.ActionListener;
 import java.sql.Date;
@@ -75,6 +74,7 @@ public class NewTaskScreen extends JPanel{
 		
 		
 		JTextArea taskDescriptionField = new JTextArea();
+		taskDescriptionField.setLineWrap(true);
 		taskDescriptionField.setBounds(191, 175, 158, 88);
 		
 		add(taskDescriptionField);
