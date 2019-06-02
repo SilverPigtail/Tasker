@@ -24,7 +24,7 @@ import javax.swing.ImageIcon;
 import java.awt.Font;
 
 /***
- * This class create the add task screen interface that allows you to creade tasks.
+ * This class create the add task screen interface that allows you to create tasks.
  * @author Alejandro Molina Lara (SilverPigtail)
  *
  */
@@ -44,7 +44,7 @@ public class NewTaskScreen extends JPanel{
 
 		
 		/***
-		 * Here are all the interface settings and visual parametres of the interface class.
+		 * Here are all the interface settings and visual parameter of the interface class.
 		 */
 		setBackground(Color.ORANGE);
 		setLayout(null);

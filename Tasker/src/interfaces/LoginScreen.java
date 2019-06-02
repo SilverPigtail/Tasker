@@ -28,7 +28,7 @@ public class LoginScreen extends JPanel{
 	
 	/***
 	 * Here's the function that establish all the Login Screen interface.
-	 * @param w -> The Window parametre that allows us to get all the fcuntions and data from the Window class.
+	 * @param w -> The Window parameter that allows us to get all the functions and data from the Window class.
 	 */
 	public LoginScreen(Window w) {
 		super();

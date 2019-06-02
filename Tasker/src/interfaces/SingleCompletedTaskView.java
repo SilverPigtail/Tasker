@@ -22,7 +22,7 @@ public class SingleCompletedTaskView extends JPanel {
 	 * This is the function that models the interface of this class
 	 * @param title -> The title of the task that we get from the Complete task button.
 	 * @param today -> The day that the task was completed. It takes the system date from the day when we push the complete button
-	 * @param w  -> he window that contains all the window functions and some important parametres.
+	 * @param w  -> he window that contains all the window functions and some important parameters.
 	 */
 	public SingleCompletedTaskView(String title, String today, Window w) {
 		setLayout(null);
