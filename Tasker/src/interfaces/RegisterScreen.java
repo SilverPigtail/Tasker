@@ -33,7 +33,7 @@ public class RegisterScreen extends JPanel {
 
 	/***
 	 * This is the function that models the interface.
-	 * @param w -> The window that contains all the window functions and some important parametres.
+	 * @param w -> The window that contains all the window functions and some important parameters.
 	 */
 	public RegisterScreen(Window w) {
 		super();

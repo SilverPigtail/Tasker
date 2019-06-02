@@ -20,7 +20,7 @@ public class SelectActionScreen extends JPanel{
 	
 	/***
 	 * This is the function that models the interface of the Select Action Screen.
-	 * @param w -> he window that contains all the window functions and some important parametres.
+	 * @param w -> he window that contains all the window functions and some important parameters.
 	 */
 	
 	public SelectActionScreen(Window w) {
