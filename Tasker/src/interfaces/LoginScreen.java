@@ -43,20 +43,32 @@ public class LoginScreen extends JPanel{
 		lblNickname.setBounds(83, 164, 100, 23);
 		add(lblNickname);
 		
+		/***
+		 * JTextField of the nickname input
+		 */
 		nickNameLoginField = new JTextField();
 		nickNameLoginField.setBounds(231, 163, 159, 30);
 		add(nickNameLoginField);
 		nickNameLoginField.setColumns(10);
 		
+		/***
+		 * JTextField of the password input
+		 */
 		JLabel lblPassword = new JLabel("Password:");
 		lblPassword.setFont(new Font("Verdana", Font.BOLD, 16));
 		lblPassword.setBounds(83, 302, 93, 23);
 		add(lblPassword);
 		
+		/***
+		 * JTextField of the password input
+		 */
 		passwordLoginField = new JPasswordField();
 		passwordLoginField.setBounds(231, 301, 159, 30);
 		add(passwordLoginField);
 		
+		/***
+		 * Sign-in button
+		 */
 		JButton btnSignIn = new JButton("Sign In!");
 		btnSignIn.addMouseListener(new MouseAdapter() {
 			@Override
