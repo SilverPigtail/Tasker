@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class SingleCompletedTaskView extends JPanel {
 	
@@ -33,7 +34,12 @@ public class SingleCompletedTaskView extends JPanel {
 				
 			}
 		});
-		btnBack.setBounds(385, 11, 55, 50);
+		btnBack.setBounds(351, 11, 89, 50);
 		add(btnBack);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("resources\\completed_task_back.png"));
+		label.setBounds(0, 0, 639, 300);
+		add(label);
 	}
 }
